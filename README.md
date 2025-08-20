@@ -11,14 +11,15 @@ This repo contains two minimal backend services in a monorepo:
 ```
 .
 ├── services
-│   ├── go-api
-│   │   ├── go.mod
-│   │   ├── go.sum
-│   │   └── main.go
-│   └── express-api
-│       ├── app.js
-│       ├── package-lock.json
-│       └── package.json
-├── .gitignore
+│   ├── express-api
+│   │   ├── app.js
+│   │   ├── Dockerfile
+│   │   ├── package-lock.json
+│   │   └── package.json
+│   └── go-api
+│       ├── Dockerfile
+│       ├── go.mod
+│       ├── go.sum
+│       └── main.go
 └── README.md
 ```
