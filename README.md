@@ -10,6 +10,9 @@ This repo contains two minimal backend services in a monorepo:
 
 ```
 .
+├── .github
+│   └── workflows
+│       └── cicd.yaml
 ├── services
 │   ├── express-api
 │   │   ├── app.js
@@ -21,5 +24,6 @@ This repo contains two minimal backend services in a monorepo:
 │       ├── go.mod
 │       ├── go.sum
 │       └── main.go
+└── .gitignore      
 └── README.md
 ```
