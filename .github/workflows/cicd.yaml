@@ -43,8 +43,8 @@ jobs:
         id: push
         uses: docker/build-push-action@v6
         with:
-          context: ./services/go-api
-          file: Dockerfile
+          context: .
+          file: ./services/go-api/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -81,8 +81,8 @@ jobs:
         id: push
         uses: docker/build-push-action@v6
         with:
-          context: ./services/express-api
-          file: Dockerfile
+          context: .
+          file: ./services/express-api/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
