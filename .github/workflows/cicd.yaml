@@ -36,7 +36,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.GO_IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.GO_IMAGE_NAME }}
           tags: latest
 
       - name: Build and push Docker image
@@ -74,7 +74,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.NODEJS_IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.NODEJS_IMAGE_NAME }}
           tags: latest
 
       - name: Build and push Docker image
