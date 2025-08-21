@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: express-svc
+  namespace: apps
+spec:
+  selector:
+    app: express
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 3000
+  type: ClusterIP
