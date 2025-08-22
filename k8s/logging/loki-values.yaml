@@ -1,0 +1,19 @@
+loki:
+  isDefault: true
+  commonConfig:
+    replication_factor: 1
+  storage:
+    type: filesystem
+  auth_enabled: false
+
+singleBinary:
+  replicas: 1
+
+grafana:
+  enabled: false
+
+promtail:
+  enabled: true
+  config:
+    clients:
+      - url: http://loki:3100/loki/api/v1/push

@@ -1,0 +1,16 @@
+prometheus:
+  prometheusSpec:
+    retention: 7d
+    scrapeInterval: 30s
+
+grafana:
+  adminUser: admin
+  adminPassword: prom-operator
+  ingress:
+    enabled: false
+  additionalDataSources:
+    - name: Loki
+      type: loki
+      access: proxy
+      url: http://loki.logging.svc.cluster.local:3100
+      isDefault: false
